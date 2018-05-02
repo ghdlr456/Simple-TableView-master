@@ -11,6 +11,19 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         myTable.dataSource = self
         myTable.delegate = self
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+     return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "1st Section"
+        } else {
+            return "2nd Section"
+        }
+    }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
