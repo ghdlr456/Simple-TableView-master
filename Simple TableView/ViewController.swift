@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Simple TableView
-//
-//  Created by D7703_06 on 2018. 4. 30..
-//  Copyright © 2018년 IceArrow. All rights reserved.
-//
 
 import UIKit
 
@@ -12,7 +5,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     @IBOutlet weak var myTable: UITableView!
     var data = ["강아지","호랑이","기니피그"]
-    var subdata = ["1","2","3"]
+    var subdata = ["한국","영국","미국"]
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.dataSource = self
@@ -37,6 +30,35 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         //이미지출력
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let myAlert = UIAlertController(title: "AlertController", message:"Test", preferredStyle: .alert)
+        
+        
 
-}
+        
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel, handler: { (action: UIAlertAction) -> Void in
+            
+            
+        })
+        
+        let okAction = UIAlertAction(title: "0 Section1 Row Seclected", style: .default) { (action: UIAlertAction) -> Void in
+            
+            
+        }
+        
+        
+        
+       
+        
+        myAlert.addAction(cancelAction)
+        myAlert.addAction(okAction)
+        
+        present(myAlert, animated: true, completion: nil)
+    }
+        
+    }
+
+
 
