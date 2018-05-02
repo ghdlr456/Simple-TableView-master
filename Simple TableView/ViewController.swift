@@ -35,27 +35,23 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         let myAlert = UIAlertController(title: "AlertController", message:"Test", preferredStyle: .alert)
         
-        
-
-        
         let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel, handler: { (action: UIAlertAction) -> Void in
-            
-            
         })
         
         let okAction = UIAlertAction(title: "0 Section1 Row Seclected", style: .default) { (action: UIAlertAction) -> Void in
-            
-            
         }
-        
-        
-        
-       
         
         myAlert.addAction(cancelAction)
         myAlert.addAction(okAction)
         
         present(myAlert, animated: true, completion: nil)
+    }
+    
+    //row 와 height 연결
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+            return 100.0
+        
     }
         
     }
